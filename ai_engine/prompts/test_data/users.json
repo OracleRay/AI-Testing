@@ -1,0 +1,13 @@
+{
+  "virtual_users": [
+    {
+      "ID": "deepseek_test",
+      "user_name": "deepseek_robot",
+      "name": "雷东宸",
+      "role_title": "test",
+      "email": "leidongchen@example.com",
+      "mobile": "13800138001",
+      "group_codes": ["test_0_0_0", "test_0_0_1"]
+    }
+  ]
+}

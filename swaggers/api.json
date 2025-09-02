@@ -1,0 +1,2028 @@
+[
+  {
+    "id": "0f84310df9bb47ec8ca4d322c03762f4",
+    "name": "AES加解密测试",
+    "method": "post",
+    "path": "/api/open/v1/aes/test",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/aes/test",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "AES_KEY": {
+          "type": "string",
+          "description": "AES加密密钥",
+          "example": "your_aes_key_here"
+        },
+        "type": {
+          "type": "string",
+          "description": "操作类型，encode为加密，decode为解密",
+          "example": "encode"
+        },
+        "data": {
+          "type": "string",
+          "description": "要加密或解密的数据",
+          "example": "cJ4YDOatuA+dKo5sySQTvUZLgTVd3c0N7yaXQLhRKZnmPZhPNZvUL0oRuSXZSfNJrTKHbgf5wl2wQZs8T2Hpbg=="
+        }
+      },
+      "required": [
+        "AES_KEY",
+        "type"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "9972105e0f87470ebb907fe8beafb93a",
+    "name": "获取投放链接",
+    "method": "post",
+    "path": "/api/open/v1/deliver/third/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/deliver/third/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "survey_id": {
+          "type": "string",
+          "description": "问卷ID，可以是单个ID或ID列表",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "status": {
+          "type": "integer",
+          "description": "状态，可选参数",
+          "example": 1
+        },
+        "page": {
+          "type": "integer",
+          "description": "页码，默认值为1",
+          "example": 1
+        },
+        "rowsPerPage": {
+          "type": "integer",
+          "description": "每页行数，默认值为10",
+          "example": 10
+        },
+        "ttype": {
+          "type": "integer",
+          "description": "类型，可选参数，区分总部或门店",
+          "example": 1
+        }
+      },
+      "required": [
+        "survey_id"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "6da934d0c74b4e6fb447729f916c2675",
+    "name": "外部链接",
+    "method": "get",
+    "path": "/api/open/v1/survey/third/([a-fA-F0-9]{24})?",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/survey/third/([a-fA-F0-9]{24})?",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {
+      "survey_id": "string"
+    },
+    "query": {
+      "sign": "string",
+      "nonce": "string",
+      "code": "string",
+      "deliver_id": "string",
+      "org_code": "string",
+      "source": "string",
+      "scenes": "string"
+    },
+    "query_required": [
+      "sign",
+      "nonce",
+      "code",
+      "deliver_id",
+      "org_code"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "8b962f0758e544f9be69ba72be1129cb",
+    "name": "微信公众号事件投放触发",
+    "method": "get",
+    "path": "/api/open/v1/deliver/wechatmp/event_delivery/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/deliver/wechatmp/event_delivery/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "deliver_id": "string",
+      "openid": "string",
+      "外部参数key 1": "string",
+      "外部参数key 2": "string",
+      "外部参数key 3": "string",
+      "外部参数key n": "string"
+    },
+    "query_required": [
+      "deliver_id",
+      "openid"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "dc29d07c7bcd4926bcf4e1a0b710e09c",
+    "name": "查询个人联系人V1",
+    "method": "get",
+    "path": "/api/openplatform/custom/member/individual/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/openplatform/custom/member/individual/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "create_dt_lte": "2023/12/31 23:59:59",
+      "create_dt_gte": "2023/01/01 00:00:00",
+      "update_dt_lte": "2023/12/31 23:59:59",
+      "update_dt_gte": "2023/01/01 00:00:00",
+      "page": 1,
+      "size": 1000
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "77a14aca77c841989242969752ac4689",
+    "name": "新增/更新联系人V1",
+    "method": "post",
+    "path": "/api/openplatform/custom/member/individual/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/openplatform/custom/member/individual/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "members": {
+          "type": "array",
+          "description": "成员列表",
+          "example": [
+            {
+              "id": "",
+              "name": "xxxxxx",
+              "gender": "女",
+              "birthday": "2014/06/15",
+              "phone": "18925366052",
+              "email": "baiw11@yahoo.com",
+              "addresses": [
+                "重庆市",
+                "重庆市",
+                "九龙坡区",
+                "周路k座"
+              ],
+              "open_id": "whgtb123f",
+              "app_id": "rjoigp333",
+              "alipay_user_id": "grcjlm",
+              "nickname": "nickname",
+              "avatar": "avatar",
+              "union_id": "union_id",
+              "out_no": "out_no"
+            }
+          ]
+        }
+      },
+      "required": [
+        "members"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "b686409f23fe401091532aaf5d58fdb5",
+    "name": "查询个人联系人V2",
+    "method": "get",
+    "path": "/api/openplatform/v2/custom/member/individual/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/openplatform/v2/custom/member/individual/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "create_dt_lte": "2023-12-31 23:59:59",
+      "create_dt_gte": "2023-01-01 00:00:00",
+      "update_dt_lte": "2023-12-31 23:59:59",
+      "update_dt_gte": "2023-01-01 00:00:00",
+      "page": 1,
+      "size": 1000
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "6b0c4ce329dd4a73873672ed5bd88fb0",
+    "name": "创建个人联系人V2",
+    "method": "post",
+    "path": "/api/openplatform/v2/custom/member/individual/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/openplatform/v2/custom/member/individual/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "members": {
+          "type": "array",
+          "description": "成员列表",
+          "example": [
+            {
+              "id": "",
+              "name": "xxxxxx",
+              "gender": "男",
+              "birthday": "2014/06/15",
+              "phone": "18925366052",
+              "email": "baiw11@yahoo.com",
+              "addresses": [
+                "重庆市",
+                "重庆市",
+                "九龙坡区",
+                "周路k座"
+              ],
+              "open_id": "whgtb123f",
+              "app_id": "rjoigp333",
+              "alipay_user_id": "grcjlm",
+              "nickname": "nickname",
+              "avatar": "avatar",
+              "union_id": "union_id",
+              "out_no": "out_no"
+            }
+          ]
+        }
+      },
+      "required": [
+        "members"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "22c6286352d84e68a5523caebf11e6a6",
+    "name": "查询标签V1",
+    "method": "get",
+    "path": "/api/openplatform/custom/member/labels/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/openplatform/custom/member/labels/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "page": 1,
+      "rows_per_page": 1000
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "2188ca8686624585a6df1f3e67dc9654",
+    "name": "创建标签V1",
+    "method": "post",
+    "path": "/api/openplatform/custom/member/labels/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/openplatform/custom/member/labels/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "labels": {
+          "type": "array",
+          "description": "标签列表",
+          "example": [
+            {
+              "name": "VIP客户",
+              "color": "#FF0000",
+              "description": "VIP客户标签"
+            }
+          ]
+        }
+      },
+      "required": [
+        "labels"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "140abfac62f441abaf1c50c49b2b4435",
+    "name": "查询标签V2",
+    "method": "get",
+    "path": "/api/openplatform/v2/custom/member/labels/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/openplatform/v2/custom/member/labels/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "page": 1,
+      "rows_per_page": 1000
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "30f2b999135146fcaadf776bf632a209",
+    "name": "授权凭证",
+    "method": "post",
+    "path": "/api/open/v1/auth/platform/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/auth/platform/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "org_id": {
+          "type": "string",
+          "description": "组织ID",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "secret_key": {
+          "type": "string",
+          "description": "密钥",
+          "example": "secret123"
+        }
+      },
+      "required": [
+        "org_id",
+        "secret_key"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "9b160bc7e483441d90826d36f3769ce8",
+    "name": "查询租户信息V1",
+    "method": "get",
+    "path": "/api/open/v1/organization/([A-Za-z]+)",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/organization/([A-Za-z]+)",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "instance_id": "instance_123"
+    },
+    "query_required": [
+      "instance_id"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "209a445f1f3e4a7f9c86f34c8aa2bfaa",
+    "name": "开通租户V1",
+    "method": "post",
+    "path": "/api/open/v1/organization/([A-Za-z]+)",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/organization/([A-Za-z]+)",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "mobile": {
+          "type": "string",
+          "description": "手机号",
+          "example": "13800138000"
+        },
+        "email": {
+          "type": "string",
+          "description": "邮箱",
+          "example": "admin@example.com"
+        },
+        "name": {
+          "type": "string",
+          "description": "组织名称",
+          "example": "测试公司"
+        },
+        "code": {
+          "type": "string",
+          "description": "组织代码",
+          "example": "TEST001"
+        },
+        "expire_dt": {
+          "type": "string",
+          "description": "过期时间",
+          "example": "2023-12-31 23:59:59"
+        },
+        "package": {
+          "type": "string",
+          "description": "套餐名称",
+          "example": "基础版"
+        }
+      },
+      "required": []
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "ed0bf2ffab044ce39170ea8bf87ef6a7",
+    "name": "更新租户信息V1",
+    "method": "put",
+    "path": "/api/open/v1/organization/([A-Za-z]+)",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/organization/([A-Za-z]+)",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "org_id": {
+          "type": "string",
+          "description": "组织ID",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "name": {
+          "type": "string",
+          "description": "组织名称",
+          "example": "测试公司"
+        },
+        "email": {
+          "type": "string",
+          "description": "邮箱",
+          "example": "admin@example.com"
+        },
+        "mobile": {
+          "type": "string",
+          "description": "手机号",
+          "example": "13800138000"
+        },
+        "expire_dt": {
+          "type": "string",
+          "description": "过期时间",
+          "example": "2023-12-31 23:59:59"
+        }
+      },
+      "required": [
+        "org_id"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "264daaa5627b4d578efeceb9bf083df8",
+    "name": "查询租户信息V2",
+    "method": "get",
+    "path": "/api/open/v2/organization/([A-Za-z0-9-]+)",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/organization/([A-Za-z0-9-]+)",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {
+      "Platform-Code": "string",
+      "Platform-Sign": "string"
+    },
+    "query": {
+      "instance_id": "instance_123"
+    },
+    "query_required": [
+      "instance_id"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "37669aad7a75432091a1cb1234048817",
+    "name": "开通租户V2",
+    "method": "post",
+    "path": "/api/open/v2/organization/([A-Za-z0-9-]+)",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/organization/([A-Za-z0-9-]+)",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "code": "xxx1",
+      "name": "xxx1",
+      "instance_id": "测试公司",
+      "package": "基础版",
+      "expire_dt": "2021/03/23",
+      "mobile": "13800138000",
+      "email": "admin@example.com",
+      "notify": true
+    },
+    "query_required": [
+      "name",
+      "instance_id",
+      "package",
+      "mobile",
+      "email",
+      "notify"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "375d77ec6d45481eb98814016c2f18ca",
+    "name": "更新租户信息V2",
+    "method": "put",
+    "path": "/api/open/v2/organization/([A-Za-z0-9-]+)",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/organization/([A-Za-z0-9-]+)",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {
+      "Platform-Code": "string",
+      "Platform-Sign": "string"
+    },
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "mobile": {
+          "type": "string",
+          "description": "系统管理员的手机号",
+          "example": "13812345678"
+        },
+        "email": {
+          "type": "string",
+          "description": "系统管理员的邮箱",
+          "example": "leidongchen@example.com"
+        },
+        "expire_dt": {
+          "type": "string",
+          "description": "套餐到期时间，格式：2021/03/23",
+          "example": "2021/03/23"
+        },
+        "instance_id": {
+          "type": "string",
+          "description": "第三方系统中租户的唯一标识",
+          "example": "instance_123"
+        },
+        "package": {
+          "type": "string",
+          "description": "套餐名",
+          "example": "旗舰版"
+        }
+      },
+      "required": [
+        "mobile",
+        "instance_id"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "1aff5f06ecea41fa92d43d059a08de75",
+    "name": "开通租户V3",
+    "method": "post",
+    "path": "/api/open/v3/organization/([A-Za-z0-9-]+)",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v3/organization/([A-Za-z0-9-]+)",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "租户编码，若客户为苹果公司，可为apple_china",
+          "example": "xxx1"
+        },
+        "name": {
+          "type": "string",
+          "description": "租户名称，如苹果公司",
+          "example": "xxx1"
+        },
+        "instance_id": {
+          "type": "string",
+          "description": "第三方系统中租户的唯一标识，建议和您系统中的对应的id保持一致",
+          "example": "测试公司"
+        },
+        "package": {
+          "type": "string",
+          "description": "套餐名，以具体对接内容为准，不同的合作伙伴可能存在不同的套餐。",
+          "example": "基础版"
+        },
+        "expire_dt": {
+          "type": "string",
+          "description": "套餐到期时间，格式：2021/03/23",
+          "example": "2021/03/23"
+        },
+        "mobile": {
+          "type": "string",
+          "description": "租户系统管理员的手机号",
+          "example": "13800138000"
+        },
+        "email": {
+          "type": "string",
+          "description": "租户系统管理员的邮箱",
+          "example": "admin@example.com"
+        },
+        "notify": {
+          "type": "boolean",
+          "description": "账号密码等开户信息是否通过短信和邮件通知租户。True为通知，False为不通知，默认为True。若为False，租户可以通过【忘记密码】来重置密码。",
+          "example": true
+        }
+      },
+      "required": [
+        "name",
+        "instance_id",
+        "package",
+        "mobile",
+        "email",
+        "notify"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "47e905ea90b64bd596a631f40cf80f97",
+    "name": "查询累计问卷/答卷数V1",
+    "method": "get",
+    "path": "/api/open/v1/platform/organization/quota/([A-Za-z0-9-]+)",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/platform/organization/quota/([A-Za-z0-9-]+)",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "org_id": "507f1f77bcf86cd799439011",
+      "page": 1,
+      "rowsPerPage": 10,
+      "project_gt": 0,
+      "project_lte": 100,
+      "respondent_gt": 0,
+      "respondent_lte": 1000
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "fd1ad0e0640744d48299377af3cd7182",
+    "name": "查询累计问卷/答卷数V2",
+    "method": "get",
+    "path": "/api/open/v2/platform/organization/quota/([A-Za-z0-9-]+)",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/platform/organization/quota/([A-Za-z0-9-]+)",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "page": 1,
+      "rows_per_page": 10,
+      "project_gt": 0,
+      "project_lte": 100,
+      "respondent_gt": 0,
+      "respondent_lte": 1000
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "f5081f961262454e9ee796e2b588524a",
+    "name": "事件订阅",
+    "method": "post",
+    "path": "/api/open/v1/event/subscribe/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/event/subscribe/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "org_id": {
+          "type": "string",
+          "description": "组织ID",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "subscribe": {
+          "type": "object",
+          "description": "订阅信息",
+          "example": {
+            "enable": true,
+            "api": "https://example.com/webhook"
+          }
+        }
+      },
+      "required": [
+        "org_id"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "2abedd13be274b3682d6b90607fd4861",
+    "name": "问候消息",
+    "method": "get",
+    "path": "/api/open/hello/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/hello/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "a0576ab73219496a9bfcef4ea982406c",
+    "name": "获取问卷项目清单V1",
+    "method": "get",
+    "path": "/api/open/v1/project/([a-fA-F0-9]{24})?",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/project/([a-fA-F0-9]{24})?",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "uid": "507f1f77bcf86cd799439011",
+      "page": 1,
+      "rowsPerPage": 10,
+      "start_udt": "2023-01-01 00:00:00",
+      "end_udt": "2023-12-31 23:59:59",
+      "re_title": "问卷",
+      "survey_id": "507f1f77bcf86cd799439011"
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "2f605b58bdc543118f61f0b031536185",
+    "name": "获取问卷项目清单V2",
+    "method": "get",
+    "path": "/api/open/v2/project/([a-fA-F0-9]{24})?",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/project/([a-fA-F0-9]{24})?",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "creator_uid": "507f1f77bcf86cd799439011",
+      "collaborator_uid": "507f1f77bcf86cd799439012",
+      "page": 1,
+      "rows_per_page": 10,
+      "start_udt": "2023-01-01 00:00:00",
+      "end_udt": "2023-12-31 23:59:59",
+      "re_title": "问卷",
+      "survey_id": "507f1f77bcf86cd799439011"
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "eedfde72b18f4b8597de821b72798135",
+    "name": "复制问卷项目V1",
+    "method": "post",
+    "path": "/api/open/v1/project/copy/([a-fA-F0-9]{24})?",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/project/copy/([a-fA-F0-9]{24})?",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "问卷标题",
+          "example": "客户满意度调查"
+        },
+        "survey_id": {
+          "type": "string",
+          "description": "问卷ID",
+          "example": "507f1f77bcf86cd799439011"
+        }
+      },
+      "required": [
+        "title",
+        "survey_id"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "6a8e97be6ba342de8dd2acb9cae5a213",
+    "name": "复制问卷项目V2",
+    "method": "post",
+    "path": "/api/open/v2/project/copy/([a-fA-F0-9]{24})?",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/project/copy/([a-fA-F0-9]{24})?",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "问卷标题",
+          "example": "客户满意度调查"
+        },
+        "survey_id": {
+          "type": "string",
+          "description": "问卷ID",
+          "example": "507f1f77bcf86cd799439011"
+        }
+      },
+      "required": [
+        "title"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "6fdbd43404634821b244c412651f3cc6",
+    "name": "导出答卷数据-excel格式",
+    "method": "post",
+    "path": "/api/open/v1/project/data/export/([a-fA-F0-9]{24})?",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/project/data/export/([a-fA-F0-9]{24})?",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "survey_id": {
+          "type": "string",
+          "description": "问卷ID",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "call_back": {
+          "type": "string",
+          "description": "回调地址",
+          "example": "https://example.com/callback"
+        },
+        "rspd_st_gte": {
+          "type": "string",
+          "description": "答卷答题开始时间大于等于(\"年月日时分秒\"，例如\"20210617151800\")",
+          "example": "20221001151800"
+        },
+        "rspd_st_lt": {
+          "type": "string",
+          "description": "答卷答题开始时间小于(\"年月日时分秒\"，例如\"20210617151800\")",
+          "example": "20221101151800"
+        },
+        "rspd_ed_gte": {
+          "type": "string",
+          "description": "答卷答题结束时间大于等于(\"年月日时分秒\"，例如\"20210617151800\")",
+          "example": "20221001151800"
+        },
+        "rspd_ed_lt": {
+          "type": "string",
+          "description": "答卷答题结束时间小于(\"年月日时分秒\"，例如\"20210617151800\")",
+          "example": "20221101151800"
+        },
+        "ex_type": {
+          "type": "integer",
+          "description": "导出类型",
+          "example": 0
+        }
+      },
+      "required": [
+        "survey_id",
+        "call_back"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "ff9edcc1afd34e7b99435b4c6cb1e1ab",
+    "name": "以附件形式导出答卷数据",
+    "method": "post",
+    "path": "/api/open/v2/project/attachment/export/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/project/attachment/export/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "survey_id": {
+          "type": "string",
+          "description": "问卷ID",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "last_id": {
+          "type": "string",
+          "description": "最后一条记录的ID",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "seq_list": {
+          "type": "array",
+          "description": "顺序列表"
+        },
+        "rowsPerPage": {
+          "type": "integer",
+          "description": "每页行数",
+          "example": 10
+        }
+      },
+      "required": [
+        "survey_id"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "28c9149661264a80868148e317284a7c",
+    "name": "添加/更新外部参数",
+    "method": "post",
+    "path": "/api/open/v1/project/extparameters/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/project/extparameters/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "description": "项目ID",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "data": {
+          "type": "array",
+          "description": "外部参数列表",
+          "example": [
+            {
+              "name": "UUID",
+              "dtype": 1,
+              "required": false,
+              "store": true,
+              "survey": true,
+              "survey_unique": true
+            },
+            {
+              "name": "uid",
+              "dtype": 2,
+              "required": true,
+              "store": true,
+              "survey": true,
+              "survey_unique": true
+            }
+          ]
+        }
+      },
+      "required": [
+        "project_id"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "e9d2e74686f04ddcb799456a677373ae",
+    "name": "获取答卷投放情况V1",
+    "method": "post",
+    "path": "/api/open/v1/project/survey/summary/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/project/survey/summary/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "project_ids": {
+          "type": "array",
+          "description": "项目ID列表"
+        }
+      },
+      "required": [
+        "project_ids"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "fdc6051f7f984af994d12032499be04c",
+    "name": "获取答卷投放情况V2",
+    "method": "post",
+    "path": "/api/open/v2/project/survey/summary/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/project/survey/summary/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "survey_ids": {
+          "type": "array",
+          "description": "项目ID列表"
+        }
+      },
+      "required": [
+        "survey_ids"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "179b3224540c48709e0299dff13bd787",
+    "name": "批量更新问卷项目状态V1",
+    "method": "put",
+    "path": "/api/open/v1/project/status/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/project/status/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "survey_status": {
+          "type": "integer",
+          "description": "变更后的状态",
+          "example": 1
+        },
+        "survey_ids": {
+          "type": "array",
+          "description": "问卷项目ID列表"
+        }
+      },
+      "required": [
+        "survey_status",
+        "survey_ids"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "cc77c4784d094c92a9d0fb49f19c6ef9",
+    "name": "删除问卷项目V1",
+    "method": "delete",
+    "path": "/api/open/v1/qdes/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/qdes/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "project_ids": {
+          "type": "array",
+          "description": "问卷ID列表",
+          "example": [
+            "610911dbc68b47314a636f24"
+          ]
+        }
+      },
+      "required": [
+        "project_ids"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "908b5252a06e40878856d2da3c979d9e",
+    "name": "新建问卷项目V1",
+    "method": "post",
+    "path": "/api/open/v1/qdes/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/qdes/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "qdes_title": {
+          "type": "string",
+          "description": "该问卷的名称，即编辑问卷时最上方的名称。通常用于给答题者显示问卷名",
+          "example": "客户满意度调查"
+        },
+        "project_title": {
+          "type": "string",
+          "description": "该项目的名称，即在项目列表页中的显示名，通常用于内部项目起名。与问卷名可以为同一个名字",
+          "example": "客户满意度调查"
+        }
+      },
+      "required": []
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "bec7078a8dc547cbb1ad5ea77db9d465",
+    "name": "编辑项目名称V1",
+    "method": "put",
+    "path": "/api/open/v1/qdes/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/qdes/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "description": "问卷id（同survey_id）",
+          "example": "610900f364b0873441903aaf"
+        },
+        "project_title": {
+          "type": "string",
+          "description": "项目标题",
+          "example": "客户满意度调查"
+        },
+        "qdes_title": {
+          "type": "string",
+          "description": "问卷标题",
+          "example": "客户满意度调查"
+        }
+      },
+      "required": [
+        "project_id"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "b7a221aa214f40f68eddad0cd5f20618",
+    "name": "删除问卷项目V2",
+    "method": "delete",
+    "path": "/api/open/v2/qdes/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/qdes/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "survey_ids": {
+          "type": "array",
+          "description": "问卷ID列表",
+          "example": [
+            "610911dbc68b47314a636f24"
+          ]
+        }
+      },
+      "required": [
+        "survey_ids"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "e9ae1db0d1444df08c9f5af53f654ecf",
+    "name": "新建问卷项目V2",
+    "method": "post",
+    "path": "/api/open/v2/qdes/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/qdes/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "qdes_title": {
+          "type": "string",
+          "description": "该问卷的名称，即编辑问卷时最上方的名称。通常用于给答题者显示问卷名",
+          "example": "客户满意度调查"
+        },
+        "project_title": {
+          "type": "string",
+          "description": "该项目的名称，即在项目列表页中的显示名，通常用于内部项目起名。与问卷名可以为同一个名字",
+          "example": "客户满意度调查"
+        },
+        "creator_uid": {
+          "type": "string",
+          "description": "创建者uid",
+          "example": "606302a2d9497aa942081a35"
+        }
+      },
+      "required": []
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "95d3e4445ace4db38d2940550a894e2d",
+    "name": "编辑项目名称V2",
+    "method": "put",
+    "path": "/api/open/v2/qdes/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/qdes/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "description": "问卷id（同survey_id）",
+          "example": "610900f364b0873441903aaf"
+        },
+        "project_title": {
+          "type": "string",
+          "description": "项目标题",
+          "example": "客户满意度调查"
+        },
+        "qdes_title": {
+          "type": "string",
+          "description": "问卷标题",
+          "example": "客户满意度调查"
+        }
+      },
+      "required": [
+        "project_id"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "343a3d53cb6f4dbeac791805fd30955c",
+    "name": "获取问卷内容详情V1",
+    "method": "get",
+    "path": "/api/open/v1/qdes/struct/json/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/qdes/struct/json/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "project_id": "507f1f77bcf86cd799439011"
+    },
+    "query_required": [
+      "project_id"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "9748ec42e5794ccfa994bcb57010e8a4",
+    "name": "获取问卷历史发布记录",
+    "method": "get",
+    "path": "/api/open/v1/qdes/struct/simple_json/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/qdes/struct/simple_json/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "survey_id": "2345725r6354676fhj"
+    },
+    "query_required": [
+      "survey_id"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "7a4ead6ba4ad47bd994536c055290934",
+    "name": "获取问卷内容详情V2-简洁版",
+    "method": "get",
+    "path": "/api/open/v2/qdes/struct/json/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/qdes/struct/json/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "survey_id": "67108270438bfdb06fb3789a"
+    },
+    "query_required": [
+      "survey_id"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "717bee1ffe2748b08abff11f2572f2d1",
+    "name": "获取问卷概览V1",
+    "method": "get",
+    "path": "/api/open/v1/qdes/struct/gidmap/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/qdes/struct/gidmap/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "survey_id": "507f1f77bcf86cd799439011",
+      "version": 1
+    },
+    "query_required": [
+      "survey_id"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "e962ebf77873408aa0f65f9deaf2992d",
+    "name": "json格式答卷数据导出V1",
+    "method": "get",
+    "path": "/api/open/v1/qdes/surveydata/json/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/qdes/surveydata/json/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "survey_id": "507f1f77bcf86cd799439011",
+      "page": 0,
+      "rowsPerPage": 0,
+      "start_time_gt": "string",
+      "start_time_lte": "string",
+      "finish_time_gt": "string",
+      "finish_time_lte": "string",
+      "start_seq": 0
+    },
+    "query_required": [
+      "survey_id"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "80b91a3ca3294638a00f97aa13b9f2f0",
+    "name": "json格式答卷数据导出V2",
+    "method": "get",
+    "path": "/api/open/v2/qdes/surveydata/json/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/qdes/surveydata/json/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "survey_id": "507f1f77bcf86cd799439011",
+      "page": 0,
+      "rows_per_page": 0,
+      "start_time_gt": "string",
+      "start_time_lte": "string",
+      "finish_time_gt": "string",
+      "finish_time_lte": "string",
+      "start_seq": 0,
+      "answer_mode": 0
+    },
+    "query_required": [
+      "survey_id"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "6cd1c410d8314b9385b2b53558d8f5c8",
+    "name": "工单状态回传V1",
+    "method": "post",
+    "path": "/api/open/v1/ticket/status/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/ticket/status/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string",
+          "description": "请求id",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "ticket_id": {
+          "type": "string",
+          "description": "工单ID",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "reason": {
+          "type": "string",
+          "description": "变更原因",
+          "example": "处理完成"
+        },
+        "current_status": {
+          "type": "integer",
+          "description": "当前状态",
+          "example": 1
+        },
+        "target_status": {
+          "type": "integer",
+          "description": "目标状态",
+          "example": 2
+        }
+      },
+      "required": [
+        "uuid",
+        "ticket_id",
+        "current_status",
+        "target_status"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "54f2894a69914ca59326d52268853f8a",
+    "name": "工单状态回传v2",
+    "method": "post",
+    "path": "/api/open/v2/ticket/status/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/ticket/status/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string",
+          "description": "请求id",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "ticket_id": {
+          "type": "string",
+          "description": "工单ID",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "reason": {
+          "type": "string",
+          "description": "变更原因",
+          "example": "处理完成"
+        },
+        "current_status": {
+          "type": "integer",
+          "description": "当前状态",
+          "example": 1
+        },
+        "target_status": {
+          "type": "integer",
+          "description": "目标状态",
+          "example": 2
+        },
+        "operator_id": {
+          "type": "string",
+          "description": "操作人id",
+          "example": "507f1f77bcf86cd799439011"
+        },
+        "handler_user": {
+          "type": "string",
+          "description": "处理人id",
+          "example": "zh001"
+        },
+        "template_fields": {
+          "type": "array",
+          "description": "工单处理模板内容",
+          "example": [
+            {
+              "name": "客诉结果",
+              "value": "电话回访已处理，相关维修已完成。",
+              "field_type": 2
+            }
+          ]
+        },
+        "transform_time": {
+          "type": "string",
+          "description": "工单处理时间，例\"2022-07-21 12:59:59\"",
+          "example": "2022-07-21 12:59:59"
+        }
+      },
+      "required": [
+        "uuid",
+        "ticket_id",
+        "current_status",
+        "target_status"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "4391f0941461465eb3e34e71f98655a3",
+    "name": "层级同步V1",
+    "method": "post",
+    "path": "/api/open/user/sync/group_tree/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/user/sync/group_tree/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "groupLevelList": {
+          "type": "array",
+          "description": "层级列表",
+          "example": [
+            {
+              "title": "总部",
+              "level": 1
+            }
+          ]
+        },
+        "groupList": {
+          "type": "array",
+          "description": "组织列表",
+          "example": [
+            {
+              "title": "总部",
+              "adminName": "super",
+              "code": "HQ001",
+              "is_root": true,
+              "parentCode": ""
+            }
+          ]
+        }
+      },
+      "required": [
+        "groupLevelList",
+        "groupList"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "70a90f5a7ff14ef4a103762d6da74e61",
+    "name": "层级同步V2",
+    "method": "post",
+    "path": "/api/open/v2/user/sync/group_tree/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/user/sync/group_tree/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "group_level_list": {
+          "type": "list",
+          "description": "层级列表",
+          "example": [
+            {
+              "title": "总部",
+              "level": 1
+            }
+          ]
+        },
+        "group_list": {
+          "type": "list",
+          "description": "组织列表",
+          "example": [
+            {
+              "title": "总部",
+              "admin_name": "super",
+              "code": "HQ001",
+              "is_root": true,
+              "parent_code": ""
+            }
+          ]
+        }
+      },
+      "required": [
+        "group_level_list",
+        "group_list"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "f9ce9c49d0a54b14b14f80986f76c6cf",
+    "name": "层级同步V3",
+    "method": "post",
+    "path": "/api/open/v3/user/sync/group_tree/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v3/user/sync/group_tree/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "group_level_list": {
+          "type": "list",
+          "description": "层级列表",
+          "example": [
+            {
+              "title": "总部",
+              "level": 1
+            }
+          ]
+        },
+        "group_list": {
+          "type": "list",
+          "description": "组织列表",
+          "example": [
+            {
+              "title": "总部",
+              "admin_name": "super",
+              "code": "HQ001",
+              "is_root": true,
+              "parent_code": ""
+            }
+          ]
+        }
+      },
+      "required": [
+        "group_level_list",
+        "group_list"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "528238a2751c42bb9f40f68d6ddc8adf",
+    "name": "查询账号V1",
+    "method": "get",
+    "path": "/api/open/v1/user/users/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/user/users/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "userName": "张三",
+      "status": 1,
+      "email": "leidongchen@example.com",
+      "mobile": "13812345678"
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "3ceaaa679c62446aa946d7110f2ff587",
+    "name": "新增账号V1",
+    "method": "post",
+    "path": "/api/open/v1/user/users/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/user/users/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "user_list": {
+          "type": "array",
+          "description": "用户列表",
+          "example": [
+            {
+              "ID": "000000000",
+              "userName": "example",
+              "name": "example",
+              "email": "example@idiaoyan.com",
+              "mobile": "18612345678",
+              "role_title": "全功能角色",
+              "group_ids": [
+                "606302a2d9497aa942081a35"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "user_list"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "a001a7b3e20347a29b5f29861ff0379b",
+    "name": "查询账号V2",
+    "method": "get",
+    "path": "/api/open/v2/user/users/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/user/users/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "user_name": "test_user",
+      "status": 1,
+      "email": "test@example.com",
+      "mobile": "13812345678"
+    },
+    "query_required": [],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "6321218718e542a2a8f31a17bda197ac",
+    "name": "新增账号V2",
+    "method": "post",
+    "path": "/api/open/v2/user/users/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/user/users/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "user_list": {
+          "type": "array",
+          "description": "用户列表",
+          "example": [
+            {
+              "ID": "000000000",
+              "user_name": "example",
+              "name": "example",
+              "role_title": "全功能角色",
+              "email": "example@idiaoyan.com",
+              "mobile": "18612345678",
+              "group_codes": [
+                "606302a2d9497aa942081a35"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "user_list"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "c42e8c36edf747fda5cd788db796f391",
+    "name": "更新账号V2",
+    "method": "put",
+    "path": "/api/open/v2/user/users/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v2/user/users/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {},
+    "query_required": [],
+    "json": {
+      "type": "object",
+      "properties": {
+        "user_list": {
+          "type": "array",
+          "description": "用户列表",
+          "example": [
+            {
+              "ID": "000000000",
+              "user_name": "example",
+              "name": "example",
+              "role_title": "全功能角色",
+              "email": "example@idiaoyan.com",
+              "mobile": "18612345678",
+              "group_codes": [
+                "606302a2d9497aa942081a35"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "user_list"
+      ]
+    },
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "e50836f72bc24f8cbcb198ecc6bafe3e",
+    "name": "获取组织映射关系",
+    "method": "get",
+    "path": "/api/open/v1/user/group/mappings/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/user/group/mappings/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "source_name": "三方平台"
+    },
+    "query_required": [
+      "source_name"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "7f2a8e83071941da9d83e2d4ddd5e7d9",
+    "name": "组织映射同步",
+    "method": "post",
+    "path": "/api/open/v1/user/group/mappings/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/user/group/mappings/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "source_name": "三方平台",
+      "mappings": [
+        {
+          "code": "3",
+          "title": "测试1店",
+          "third_code": "A0001",
+          "third_title": "鸿胪寺店"
+        },
+        {
+          "code": "1",
+          "title": "测试2店",
+          "third_code": "A0002",
+          "third_title": "鸡西北店"
+        },
+        {
+          "code": "2",
+          "title": "测试3店",
+          "third_code": "A0003",
+          "third_title": "长征路店"
+        },
+        {
+          "code": "7",
+          "title": "测试4店",
+          "third_code": "A0004",
+          "third_title": "人民大道店"
+        }
+      ]
+    },
+    "query_required": [
+      "source_name"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  },
+  {
+    "id": "6e3fb946289746d4813f4cf9a12ef401",
+    "name": "组织映射同步",
+    "method": "put",
+    "path": "/api/open/v1/user/group/mappings/",
+    "url": "http://https://autoopen.xm-mysql.bestcem.com/api/open/v1/user/group/mappings/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "paths": {},
+    "query": {
+      "source_name": "三方平台",
+      "mappings": [
+        {
+          "code": "3",
+          "title": "测试1店",
+          "third_code": "A0001",
+          "third_title": "鸿胪寺店"
+        },
+        {
+          "code": "1",
+          "title": "测试2店",
+          "third_code": "A0002",
+          "third_title": "鸡西北店"
+        },
+        {
+          "code": "2",
+          "title": "测试3店",
+          "third_code": "A0003",
+          "third_title": "长征路店"
+        },
+        {
+          "code": "7",
+          "title": "测试4店",
+          "third_code": "A0004",
+          "third_title": "人民大道店"
+        }
+      ]
+    },
+    "query_required": [
+      "source_name"
+    ],
+    "json": {},
+    "form": {},
+    "formData": {}
+  }
+]

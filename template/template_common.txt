@@ -1,0 +1,84 @@
+# -*- coding:utf-8 -*-
+# AI自动生成的${feature}API测试代码
+# 生成时间: ${generate_time}
+# 请根据需要调整参数和API配置
+
+import allure
+import pytest
+from httprunner import HttpRunner, Config, Step, RunRequest, Parameters
+
+# ${feature}成功用例测试
+@allure.feature('${feature}')
+@pytest.mark.test
+@pytest.mark.pre
+@pytest.mark.saas
+@pytest.mark.success
+class TestScriptSuccess(HttpRunner):
+    @pytest.mark.parametrize(
+        "params",
+        Parameters(
+            {
+                "case_name-request_data-assert_code":
+                ${success_cases}
+            }
+        )
+    )
+    def test_start(self, params):
+        super().test_start(params)
+
+    config = (
+        Config("${feature}")
+        .base_url("${base_url}")
+        .verify(False)
+    )
+
+    teststeps = [
+        Step(
+            RunRequest("${feature}")
+                .setup_hook("${hooks_open_request($request,True,False)}")
+                .${method}("${path}")
+                .${with}("${request_data}")
+                .teardown_hook("${hooks_open_response($response)}")
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal('body.code', "${assert_code}")
+        )
+    ]
+
+# ${feature}失败用例测试
+@allure.feature('${feature}')
+@pytest.mark.test
+@pytest.mark.pre  
+@pytest.mark.saas
+@pytest.mark.error
+class TestScriptError(HttpRunner):
+    @pytest.mark.parametrize(
+        "params",
+        Parameters(
+            {
+                "case_name-request_data-assert_code":
+                ${error_cases}
+            }
+        )
+    )
+    def test_start(self, params):
+        super().test_start(params)
+
+    config = (
+        Config("${feature}错误用例")
+        .base_url("${base_url}")
+        .verify(False)
+    )
+
+    teststeps = [
+        Step(
+            RunRequest("${feature}错误用例")
+                .setup_hook("${hooks_open_request($request,True,False)}")
+                .${method}("${path}")
+                .${with}("${request_data}")
+                .teardown_hook("${hooks_open_response($response)}")
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal('body.code', "${assert_code}")
+        )
+    ]

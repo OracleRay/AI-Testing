@@ -1,0 +1,12 @@
+# 如果需要详细配置，请发邮件于leidongchen@qq.com
+# 修改后的文件名请求改为 config.yaml
+
+# AI模型配置
+ai_config:
+  model_name: "deepseek-coder"  # DeepSeek-Coder 33B
+  temperature: 0.7
+  top_p: 0.8
+  max_tokens: 8192
+  api_key: "yout api key"  # DeepSeek API Key
+
+# 其他配置...
